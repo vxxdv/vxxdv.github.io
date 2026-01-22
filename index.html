@@ -1,9 +1,21 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>vxxdv - login</title>
+</head>
 <body>
-  <h1>YOUR NAME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+  <section class="container">
+    <h1>Sign In</h1>
+    <form action="home.html" method="POST">
+      <input type="email" name="email" id="email" placeholder="Enter email" required />
+      <input type="password" name="password" id="password"placeholder="Enter password" required />
+      <label for="checkbox" id="remember-me">Remember me?</label>
+      <input type="checkbox" name="checkbox" id="checkbox" />
+      <input type="submit" name="submit" value="Sign In" id="sign-in" />
+    </form>
+  </section>
 </body>
-
 </html>
