@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+  font-family: inter;
+  text-align: center;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-image: url(./images/Untitled.png);
+}
+
+.container {
+  display: block;
+  height: 500px;
+  width: 400px;
+  padding: 70px;
+  margin: 250px auto;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow:  0 4px 10px darkslategrey;
+}
+
+form {
+  display: inline-block;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #007dfc;
+}
+
+#email, #password, #log-in {
+  display: inline-block;
+  height: 45px;
+  width: 260px;
+  border: solid black 3px;
+  border-radius: 16px;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+#sign-in {
+  display: inline-block;
+  height: 45px;
+  width: 260px;
+  margin: 50px 0;
+  color: white;
+  background-color: #007dfc;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 16px;
+  transition: 0.4s ease;
+}
+
+#sign-in:hover {
+  height: 45px;
+  width: 260px;
+  box-shadow: 0 4px 10px darkslategrey;
+  transition: 0.4s ease;
+}
+
