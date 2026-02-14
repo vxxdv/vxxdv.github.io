@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: inter;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  color: #FFAAB8;  
+  overflow: hidden;
+}
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAEFEA;
+}
+.container{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+span{
+  color:#F39EB6;
+}
+img{
+  height: 220px;
+  width: 220px;
+}
+h3{
+  margin: 30px;
+  margin-bottom: 35px;
+}
+.buttons{
+  width: 400px;
+
+}
+input{
+  height: 50px;
+  width: 140px;
+  border-radius: 1rem;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+input:hover{
+  transform: scale(1.10);
+  box-shadow: 0px 6px 10px #FFAAB8;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+#yes{
+  border: solid 4px #FFAAB8;
+  background-color: #FFD8DF;
+  color: #FFAAB8;
+  position: absolute;
+  bottom: 300px;
+  left: 41%;
+  transition: all 0.2s ease-in-out;
+  transition: left 0.75s ease, top 0.75s ease;
+}
+#yes:hover{
+  border: solid 4px #FFAAB8;
+  background-color: #FFAAB8;
+  color: #FFD8DF;
+  transition: all 0.2s ease-in-out;
+}
+#no{
+  border: solid 4px #FFAAB8;
+  background-color: #FFAAB8;
+  color: #FFD8DF;
+  position: absolute;
+  bottom: 300px;
+  right: 41%;
+  transition: all 0.2s ease-in-out;
+  transition: left 0.75s ease, top 0.75s ease,
+}
+#no:hover{
+  background-color: #FFD8DF;
+  color: #FFAAB8;
+}
