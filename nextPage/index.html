@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Secret - reveal</title>
+</head>
+<body>
+  <div class="time-container">
+    <h2>We've been together for:</h2>
+    <div id="timer">Loading...</div>
+    <img src="../images/spin.gif" alt="">
+    <h2>MWAH</h2>
+    <h2>MWAH</h2>
+    <h1>I LOVE YOU</h1>
+  </div> 
+  <div class="box c">
+    <h2>I KNEW YOU WOULD SAY YES</h2>
+    <span>Us when I code..</span>
+    <img src="../images/pcjump.gif" alt="">
+  </div>
+  <div class="box e">
+    <h3>Make some hearts</h3>
+    <input type="button" id="heart-gen" value="Hearts">
+    <div id="container"></div>
+  </div>
+  <div class="box f">
+    <h2>Us in 2 days</h2>
+    <img src="../images/hug.gif" alt="">
+    <h1>MWAHHHH</h1>
+    <h1>I LOVE YOUUU</h1>
+  </div>
+<script>
+  const startDate = new Date("2024-11-09T12:00:00"); 
+
+  const timerElement = document.getElementById("timer");
+
+  function updateTimer() {
+    const now = new Date();
+    let diff = now - startDate;
+
+    let totalSeconds = Math.floor(diff / 1000);
+
+    const years = Math.floor(totalSeconds / (365 * 24 * 60 * 60));
+    totalSeconds -= years * 365 * 24 * 60 * 60;
+
+    const months = Math.floor(totalSeconds / (30 * 24 * 60 * 60));
+    totalSeconds -= months * 30 * 24 * 60 * 60;
+
+    const days = Math.floor(totalSeconds / (24 * 60 * 60));
+    totalSeconds -= days * 24 * 60 * 60;
+
+    const hours = Math.floor(totalSeconds / 3600);
+    totalSeconds -= hours * 3600;
+
+    const minutes = Math.floor(totalSeconds / 60);
+    totalSeconds -= minutes * 60;
+
+    const seconds = totalSeconds;
+
+    timerElement.textContent = 
+      `${years}y ${months}m ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateTimer, 1000);
+
+  updateTimer();
+
+  const button = document.getElementById("heart-gen");
+  const container = document.getElementById("container");
+
+  const heartSrc = "../images/heart.png";
+
+  button.addEventListener("click", () => {
+    const heart = document.createElement("img");
+    heart.src = heartSrc;
+
+    const maxX = window.innerWidth - 50; 
+    const maxY = window.innerHeight - 50; 
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    heart.style.left = randomX + "px";
+    heart.style.top = randomY + "px";
+
+    container.appendChild(heart);
+    setTimeout(() => {
+    heart.remove();
+  }, 4000);
+});
+</script>
+
+</body>
+</html>
