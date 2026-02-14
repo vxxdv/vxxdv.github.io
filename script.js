@@ -27,7 +27,7 @@ const yesTexts = [
   "Click the no!"
 ];
 
-const finalLink = "nextPage/index.html";
+const finalLink = "nextPage/next.html";
 
 let yesClicks = 0;
 
@@ -57,3 +57,4 @@ yesButton.addEventListener("click", (e) => {
     window.location.href = finalLink;
   }
 });
+
